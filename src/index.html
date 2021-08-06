@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="styleResponsive.css"   media="(max-device-width: 750px)"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
   </head>
   <body>
+    <header>
+      <div id="Banner" onclick="window.location.reload()">
+        <img src="img/Studio_Ghibli_portal_logo.png" alt="" id="LogoSG"> <!--Studios Ghibli-->
+      </div>
+      <div class="socialMedia">
+        <a href="https://www.instagram.com/?hl=es" class="fa fa-instagram"></a>
+        <a href="https://www.instagram.com/?hl=es" class="fa fa-twitter"></a>
+        <a href="https://www.youtube.com/channel/UCuWmQYAvytwSl6tqjOxV5Ow/videos" class="fa fa-youtube"></a>
+      </div>
+    </header>
+    <main>
+      <div class="carousel"></div>
+      <div class="search-bar">
+        <!--<input type="" id="check">
+        <label for="check" class="checkbtn">-->
+        <h2><button id="btnToMovilMenu"><i class="fas fa-search"></i>        Search by:</button>  </h2>
+        <div id="mySelects" >
+          <ul>
+            <li><select class="selInput" id="selectDirector">
+              <option value="" selected disabled><span>Directors</span> </option>
+            </select></li>
+            <li><select class="selInput" id="selectProducer">
+              <option value="" selected disabled>Producers</option>
+            </select></li>
+            <li><select class="selInput" id="selectCharacter">
+              <option value="" selected disabled>Characters of </option>
+            </select></li>
+            <li><select class="selInput" id="selectLocation">
+              <option value="" selected disabled>Locations</option>
+            </select></li>
+            <li><select class="selInput" id="selectVehicle">
+              <option value="" selected disabled> Vehicles</option>
+            </select></li>
+          </ul>
+        </div>  
+         
+       </div>
+      <div id="FirstPage">
+        <h1 id="title">ALL FILMS</h1>
+        <div id="selectCenter">
+        <select id="sortinGhibli" style="text-align: center !important; align-items: center !important;">
+          <option value="" selected disabled>Sort by</option>
+          <option value="AZ">A - Z</option>
+          <option value="ZA">Z - A</option>
+          <option value="scoreMaxToMin">Highest score</option>
+          <option value="scoreMinToMax">Lowest score</option>
+          <option value="dateMaxToMin">More recent</option>
+          <option value="dateMinToMax">Less recent</option>
+        </select>
+      </div>
+          <!--<select class="sortCss" id="sortBy"></select>-->
+          <div class="layoutPoster">    
+              <div class="moviesPosters" id="allFilms"></div>
+            </div>   
+      </div><!--Fist Page-->
+          <div id="SecoundPage">
+            <h1 id="Name"> </h1>
+            <p id="caption"></p>
+              <div id="informativeFile"></div>
+              <div id="character"></div>
+              <div id="locations"></div>
+              <div id="characterFile"></div>
+              <div id="vehicles"></div>
+              <div id="vehiclesFile"></div>
+          </div>
+    </main>
+    <footer>
+      <div id="socialMedia"></div>
+    </footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>

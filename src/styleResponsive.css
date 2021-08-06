@@ -1,49 +1,21 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 
 body{
-
-/*     padding: 0px;
-  
-    border: 0px; */
     background-color:  rgba(217, 156, 184, 0.2);
     margin: auto;
     font-family: 'Playfair Display', serif;
-} 
-
-.selInput{
-    font-family: 'Playfair Display', serif;
-    font-size: medium;
-    font-weight: bold;
 }
-
 header{
     display: flex;
     flex-flow: row wrap;
-
+    justify-content: space-between;
     background-color: #026873;
     text-align: justify;
     padding: .2rem;
-/*     width: 1345px;
-    height: 80px; */
+
 }
 
-@media only screen and (min-width: 768px) {
-    #carousel{
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    .moviesPosters{
-        display: flex;
-        flex-flow: column;
-    }
-
-    .showPosters{
-        flex-basis:auto;
-    }
-}   
 #carousel{
     max-width: -webkit-fill-available; /*1345px*/
     height: 490px;
@@ -51,9 +23,7 @@ header{
 #Banner{
     color: #fff;
     font-size: 50px;
-    /*padding: 10px; */
     padding-left: 90px;
-    margin: auto;
     font-family: 'Playfair Display', serif;
 }
 #LogoSG{
@@ -71,20 +41,31 @@ header{
     text-align: justify;
     padding: .2rem;
     height: 72px; 
-    justify-content: space-between;
+}
+
+select{
+    font-size: x-large !important;
 }
 .search-bar select{
     max-width: 150px;
+}
+.search-bar button{
+    border: none;
+    background-color: #C9D991;
+    font-size: x-large;
 }
 .search-bar{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     background-color: #C9D991;
+    padding: 0px 50px;
 }
 .search-bar ul li{
     list-style: none;
-    display: inline-block;
+    display: block;
+    margin: 60px 0px;
+    line-height: 20px;
 }
 .selInput {
     border:0px;
@@ -100,73 +81,32 @@ header{
     font-size: 25px;
     cursor: pointer;
     float: right;
-    display: none;
+    display: block;
 }
-
-    /*display: none;*/
-
-/*@media screen and (max-device-width: 750px){
-    .search-bar{
-        padding: 0px 50px;
-    }
-    #btnToMovilMenu{
-        display: block;
-    }
     .search-bar ul{
         width: 100%;
-        height: 100vh; /*VH ?
+        height: 100vh; /*VH */
         background-color: #53694c;
         position: fixed;
         top: 335px;
-        left: 0%;
+        left: -105%;
         text-align: center;
         transition: 0.4s;
     }
-    .search-bar ul li{
-        display: block;
-        margin: 60px 0px;
-        line-height: 20px;
-    }
-    input[type="checkbox"]:checked {
-        /*.& cuando la clase se agregue
-        left: 0;
-        background-color: #000;
-    }
-    .poster {
-        flex-basis: 45%; /* explanation below 
-        margin-bottom: 1rem;
-    }
-}/*final del responsivo menu*/
-/*.selInput:hover*/
+
+  
 option{
     background-color: #EBFFA5;
     padding: 1em;
 }
-.search-bar select{
-   padding: 15px !important;
-   outline: 0;
-   transition: all 0.25s ease;
-}
 
-
-@media only screen and (min-width: 768px) {
-#carousel{
-    width: 100% !important;
-    height: auto !important;
-}
-}   
-.carousel{ /**Tuve que cambiarlo a clase i don´t kwon why*/
-    max-width: -webkit-fill-available; /*1345px*/
+.carousel{ 
+    max-width: -webkit-fill-available; 
     height: 200px;
     background-size: cover;
     background-image: url(img/chihirOO.jpg);
 }
-#Banner{
-    color: #fff;
-    font-size: 36px;
-    margin: 5px;
-/* master*/
-}
+
 #title{
     text-align: center;
 }
@@ -187,38 +127,41 @@ option{
 	background: rgba(217, 156, 184, 0.5);
 }
 #selectCenter{
-    padding-left: 400px;
+    padding-left: 20px;
 
+}
+#filterImg{
+    width: inherit;
 }
 figure {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-
-.moviesPosters{
+#allFilms{
     display: flex;
     justify-content: space-evenly;
     align-content: stretch;
-    flex-flow: row wrap;
+    flex-flow: row wrap !important; 
 }
 
 .poster {
-    flex-basis: 21%; /* explanation below */
+    flex-basis: 45%;
     margin-bottom: 1rem;
 }
 
 .poster img{
     width: 100%;
 }
-figcaption.poster { /*NO SE PORQUE NO SALEEE ------------------------------------------------*/
+figcaption.poster { 
     background-color: #000 !important;
     color: #fff;
 
 }
+.posterFilter{
+    width: -webkit-fill-available;
+}
 
-/*.poster:hover{
-    background-transition: swep to top;
-}*/
+
 footer{
     max-width: -webkit-fill-available; 
     height: 60px; 
@@ -241,7 +184,9 @@ footer{
     padding: 1.5rem 2.5rem;
 }
 
-
+.flexRow{
+    display: block !important;
+}
 #SecoundPage{
     padding: 2rem;
     margin-bottom: 1rem;
@@ -265,10 +210,9 @@ option{
     font-size: 2rem;
 }
 #informativeFile{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
-
 hr{
     color: #000;
 }
@@ -288,10 +232,10 @@ hr{
     align-content: center;
     border-radius: 20px;
   }
-#character figure img { /*hace que la figure se ajuste al tamaño que tiene la imagen*/
+#character figure img { 
    width: 250px;
     height: 220px;
-    object-fit: cover; /*Es para que la imagen se ajuste al tama;o */
+    object-fit: cover; 
     display: block;
     border-radius: 30px;
 
@@ -308,23 +252,17 @@ hr{
     font-style: italic;
     padding: 2px;
     text-align: center;
-    font-size: x-large; /*no se porque no me quiere cambiar el tama;o de la letra*/
+    font-size: x-large; 
     border-radius: 30px;
   }
+
 #infoCharacter{
-
     padding: 10px;
-
-    /*padding: 10px;*/
-   /* margin-right: 200px;*/
-
     border: solid;
     border-radius: 30px;
 }
 #imgCharacter{
     border-radius: 30px;
-   /* margin-left: 200px;*/
-
 }
 button{
     border: none;
@@ -345,44 +283,4 @@ button{
 #vehiclesFile{
     justify-content: center;
 }
-
 /*flex-wrap: wrap;*/
-.socialMedia{
-    
-    margin-right: 4rem;
-}
-
-.fa {
-    padding: 20px;
-    font-size: 24px !important;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-/*   .fa-facebook {
-    background: #3B5998;
-    color: white;
-  } */
-
-  .fa-instagram {
-    background: #ea4c89;
-    color: white;
-  }
-  
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
